@@ -4,6 +4,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter'
 import '../style/globals.css'
 import { ThemeProvider } from '@mui/material'
 import theme from '@/style/theme'
+import NavBar from '@/components/NavBar/NavBar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,7 +22,10 @@ const RootLayout: React.FC<Readonly<RootLayoutProps>> = (props: Readonly<RootLay
         <html lang='en'>
             <AppRouterCacheProvider options={{ enableCssLayer: true }}>
                 <ThemeProvider theme={theme}>
-                    <body className={inter.className}>{props.children}</body>
+                    <body className={inter.className}>
+                        <NavBar />
+                        <main>{props.children}</main>
+                    </body>
                 </ThemeProvider>
             </AppRouterCacheProvider>
         </html>
