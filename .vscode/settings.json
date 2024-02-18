@@ -8,5 +8,6 @@
     "eslint.validate": ["typescript"],
     "prettier.useEditorConfig": false,
     "prettier.useTabs": false,
-    "prettier.configPath": ".prettierrc"
+    "prettier.configPath": ".prettierrc",
+    "css.lint.unknownAtRules": "ignore"
 }

@@ -1,40 +1,56 @@
 'use client'
 
+import { type PageName } from '@/types/Page'
+import { Menu as MenuIcon } from '@mui/icons-material'
+import {
+    Box,
+    Button,
+    Typography,
+    Divider,
+    List,
+    ListItem,
+    ListItemButton,
+    ListItemText,
+    AppBar,
+    Toolbar,
+    IconButton,
+    Drawer,
+} from '@mui/material'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
-import AppBar from '@mui/material/AppBar'
-import Box from '@mui/material/Box'
-import Divider from '@mui/material/Divider'
-import Drawer from '@mui/material/Drawer'
-import IconButton from '@mui/material/IconButton'
-import List from '@mui/material/List'
-import ListItem from '@mui/material/ListItem'
-import ListItemButton from '@mui/material/ListItemButton'
-import ListItemText from '@mui/material/ListItemText'
-import MenuIcon from '@mui/icons-material/Menu'
-import Toolbar from '@mui/material/Toolbar'
-import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
 
-const drawerWidth = 240
-const navItems = ['Home', 'About', 'Contact']
+const drawerWidth = '50vw'
+const navItems: PageName[] = ['Home', 'About', 'Contact']
 
 const NavBar = () => {
-    const [mobileOpen, setMobileOpen] = useState(false)
+    const router = useRouter()
+    const handleNavigation = (page: PageName) => {
+        if (page === 'Home') {
+            router.push('/')
+        } else {
+            router.push('/' + page.toLowerCase())
+        }
+    }
 
+    const [isMobileDrawerOpen, setMobileOpen] = useState(false)
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState)
     }
 
-    const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant='h6' sx={{ my: 2 }}>
-                MUI
-            </Typography>
+    const mobileDrawer = (
+        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', color: '#fffff5' }}>
+            <Typography className='py-2 text-2xl font-semibold'>charliedevs</Typography>
             <Divider />
             <List>
                 {navItems.map((item) => (
                     <ListItem key={item} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }}>
+                        <ListItemButton
+                            className='rounded-lg border border-transparent m-1 py-1 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30'
+                            sx={{ textAlign: 'center' }}
+                            onClick={() => {
+                                handleNavigation(item)
+                            }}
+                        >
                             <ListItemText primary={item} />
                         </ListItemButton>
                     </ListItem>
@@ -45,27 +61,34 @@ const NavBar = () => {
 
     return (
         <Box display='flex'>
-            <AppBar component='nav' sx={{ backgroundColor: 'transparent' }}>
-                <Toolbar>
+            <AppBar component='nav' sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
+                <Toolbar sx={{ display: 'flex', alignItems: 'center' }}>
                     <IconButton
                         color='inherit'
                         aria-label='open drawer'
                         edge='start'
                         onClick={handleDrawerToggle}
-                        sx={{ mr: 2, display: { sm: 'none' } }}
+                        sx={{ mr: 2, display: { md: 'none' } }}
                     >
                         <MenuIcon />
                     </IconButton>
                     <Typography
                         variant='h6'
                         component='div'
-                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                        color='var(--foreground-rgb)'
+                        sx={{ flexGrow: 1, display: { xs: 'none', md: 'block' } }}
                     >
-                        MUI
+                        charliedevs
                     </Typography>
-                    <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                    <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         {navItems.map((item) => (
-                            <Button key={item} sx={{ color: '#fff' }}>
+                            <Button
+                                key={item}
+                                className='rounded-lg border border-transparent ml-2 px-3 py-2 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30'
+                                onClick={() => {
+                                    handleNavigation(item)
+                                }}
+                            >
                                 {item}
                             </Button>
                         ))}
@@ -75,17 +98,21 @@ const NavBar = () => {
             <nav>
                 <Drawer
                     variant='temporary'
-                    open={mobileOpen}
+                    open={isMobileDrawerOpen}
                     onClose={handleDrawerToggle}
                     ModalProps={{
                         keepMounted: true, // Better open performance on mobile.
                     }}
                     sx={{
-                        display: { xs: 'block', sm: 'none' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                        display: { xs: 'block', md: 'none' },
+                        '& .MuiDrawer-paper': {
+                            boxSizing: 'border-box',
+                            width: drawerWidth,
+                            backgroundColor: '#222228',
+                        },
                     }}
                 >
-                    {drawer}
+                    {mobileDrawer}
                 </Drawer>
             </nav>
         </Box>
