@@ -61,7 +61,7 @@ const NavBar = () => {
 
     return (
         <Box display='flex'>
-            <AppBar component='nav' sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
+            <AppBar component='nav' sx={{ background: 'transparent', boxShadow: 'none' }}>
                 <Toolbar sx={{ display: 'flex', alignItems: 'center' }}>
                     <IconButton
                         color='inherit'
@@ -75,7 +75,7 @@ const NavBar = () => {
                     <Typography
                         variant='h6'
                         component='div'
-                        color='var(--foreground-rgb)'
+                        color='rgb(var(--foreground-rgb))'
                         sx={{ flexGrow: 1, display: { xs: 'none', md: 'block' } }}
                     >
                         charliedevs
