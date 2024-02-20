@@ -14,7 +14,7 @@ const ImageBackdrop = ({ left = '28%', children }: PropsWithChildren<ImageBackdr
                 alignItems: 'center',
                 zIndex: -1,
                 transition: '1s',
-                left,
+                left: { xs: '0%', md: left },
                 '&:before': {
                     content: '""',
                     position: 'absolute',
