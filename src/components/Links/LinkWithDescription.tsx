@@ -12,6 +12,7 @@ const LinkWithDescription = ({ link, title, description }: LinkWithDescriptionPr
     return (
         <Box
             id='linkWithDescription'
+            minWidth={{ md: 180 }}
             maxWidth={{ md: 300 }}
             height={{ md: 190 }}
             p={2}
