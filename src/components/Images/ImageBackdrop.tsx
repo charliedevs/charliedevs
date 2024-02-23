@@ -8,11 +8,12 @@ interface ImageBackdropProps {
 const ImageBackdrop = ({ left = '28%', children }: PropsWithChildren<ImageBackdropProps>) => {
     return (
         <Box
+            id='imageBackdrop'
+            position='relative'
+            display='flex'
+            alignItems='center'
+            zIndex={-1}
             sx={{
-                position: 'relative',
-                display: 'flex',
-                alignItems: 'center',
-                zIndex: -1,
                 transition: '1s',
                 left: { xs: '0%', md: left },
                 '&:before': {

@@ -1,5 +1,12 @@
+import SelfImage from '@/components/Images/SelfImage'
+import { Box } from '@mui/material'
+
 const AboutPage = () => {
-    return <div>testing...</div>
+    return (
+        <Box>
+            <SelfImage />
+        </Box>
+    )
 }
 
 export default AboutPage

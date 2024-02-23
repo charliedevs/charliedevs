@@ -19,7 +19,7 @@ interface RootLayoutProps {
 const RootLayout: React.FC<Readonly<RootLayoutProps>> = (props: Readonly<RootLayoutProps>) => {
     return (
         <html lang='en'>
-            <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+            <AppRouterCacheProvider options={{ enableCssLayer: false }}>
                 <ThemeProvider theme={theme}>
                     <body className={inter.className}>
                         <NavBar />

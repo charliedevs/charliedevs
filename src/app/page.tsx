@@ -3,19 +3,20 @@
 import { Box, Grid, Typography } from '@mui/material'
 import { grey } from '@mui/material/colors'
 import type { NextPage } from 'next'
-import SelfImage from '@/components/Images/SelfImage'
 import LinkWithDescription from '@/components/Links/LinkWithDescription'
+import ImageBackdrop from '@/components/Images/ImageBackdrop'
 
 const Home: NextPage = () => {
     return (
         <>
             <Box
+                id='topText'
+                display={{ xs: 'block', md: 'flex' }}
                 zIndex={10}
                 maxWidth={850}
                 width='100%'
                 alignItems='center'
                 justifyContent='space-between'
-                display={{ xs: 'block', md: 'flex' }}
             >
                 <Typography
                     paragraph
@@ -44,9 +45,10 @@ const Home: NextPage = () => {
                 </Typography>
             </Box>
 
-            <SelfImage />
+            <ImageBackdrop />
 
             <Grid
+                id='links'
                 container
                 spacing={2}
                 width={{ md: '100%' }}

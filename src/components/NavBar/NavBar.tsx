@@ -1,5 +1,6 @@
 'use client'
 
+import { backgroundColor, lightGrey } from '@/style/theme'
 import { type PageName } from '@/types/Page'
 import { Menu as MenuIcon } from '@mui/icons-material'
 import {
@@ -45,7 +46,6 @@ const NavBar = () => {
                 {navItems.map((item) => (
                     <ListItem key={item} disablePadding>
                         <ListItemButton
-                            className='rounded-lg border border-transparent m-1 py-1 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30'
                             sx={{ textAlign: 'center' }}
                             onClick={() => {
                                 handleNavigation(item)
@@ -75,7 +75,7 @@ const NavBar = () => {
                     <Typography
                         variant='h6'
                         component='div'
-                        color='rgb(var(--foreground-rgb))'
+                        color={lightGrey}
                         sx={{ flexGrow: 1, display: { xs: 'none', md: 'block' } }}
                     >
                         charliedevs
@@ -84,9 +84,14 @@ const NavBar = () => {
                         {navItems.map((item) => (
                             <Button
                                 key={item}
-                                className='rounded-lg border border-transparent ml-2 px-3 py-2 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30'
                                 onClick={() => {
                                     handleNavigation(item)
+                                }}
+                                sx={{
+                                    color: lightGrey,
+                                    '&:hover': {
+                                        color: 'white',
+                                    },
                                 }}
                             >
                                 {item}
@@ -108,7 +113,7 @@ const NavBar = () => {
                         '& .MuiDrawer-paper': {
                             boxSizing: 'border-box',
                             width: drawerWidth,
-                            backgroundColor: '#222228',
+                            backgroundColor,
                         },
                     }}
                 >
