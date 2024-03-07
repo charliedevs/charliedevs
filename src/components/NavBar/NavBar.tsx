@@ -1,7 +1,6 @@
 'use client'
 
 import { backgroundColor, lightGrey } from '@/style/theme'
-import { type PageName } from '@/types/Page'
 import { Menu as MenuIcon } from '@mui/icons-material'
 import {
     Box,
@@ -17,22 +16,18 @@ import {
     IconButton,
     Drawer,
 } from '@mui/material'
-import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import { useState } from 'react'
 
 const drawerWidth = '50vw'
-const navItems: PageName[] = ['Home', 'About', 'Contact']
+
+const navItems = [
+    { text: 'Home', slug: '/home' },
+    { text: 'About', slug: '/about' },
+    { text: 'Contact', slug: '/contact' },
+]
 
 const NavBar = () => {
-    const router = useRouter()
-    const handleNavigation = (page: PageName) => {
-        if (page === 'Home') {
-            router.push('/')
-        } else {
-            router.push('/' + page.toLowerCase())
-        }
-    }
-
     const [isMobileDrawerOpen, setMobileOpen] = useState(false)
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState)
@@ -44,15 +39,12 @@ const NavBar = () => {
             <Divider />
             <List>
                 {navItems.map((item) => (
-                    <ListItem key={item} disablePadding>
-                        <ListItemButton
-                            sx={{ textAlign: 'center' }}
-                            onClick={() => {
-                                handleNavigation(item)
-                            }}
-                        >
-                            <ListItemText primary={item} />
-                        </ListItemButton>
+                    <ListItem key={item.text} disablePadding>
+                        <Link href={item.slug}>
+                            <ListItemButton sx={{ textAlign: 'center' }}>
+                                <ListItemText primary={item.text} />
+                            </ListItemButton>
+                        </Link>
                     </ListItem>
                 ))}
             </List>
@@ -82,20 +74,18 @@ const NavBar = () => {
                     </Typography>
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         {navItems.map((item) => (
-                            <Button
-                                key={item}
-                                onClick={() => {
-                                    handleNavigation(item)
-                                }}
-                                sx={{
-                                    color: lightGrey,
-                                    '&:hover': {
-                                        color: 'white',
-                                    },
-                                }}
-                            >
-                                {item}
-                            </Button>
+                            <Link key={item.text} href={item.slug}>
+                                <Button
+                                    sx={{
+                                        color: lightGrey,
+                                        '&:hover': {
+                                            color: 'white',
+                                        },
+                                    }}
+                                >
+                                    {item.text}
+                                </Button>
+                            </Link>
                         ))}
                     </Box>
                 </Toolbar>

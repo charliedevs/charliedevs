@@ -1,5 +1,3 @@
-'use client'
-
 import { Box, Grid, Typography } from '@mui/material'
 import { grey } from '@mui/material/colors'
 import type { NextPage } from 'next'
