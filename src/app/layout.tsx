@@ -17,11 +17,9 @@ const RootLayout: React.FC<Readonly<RootLayoutProps>> = (
 ) => {
     return (
         <html lang='en'>
-                    <body className={inter.className}>
-                        <main className='flex min-h-screen flex-col items-center justify-between p-24'>
-                            {props.children}
-                        </main>
-                    </body>
+            <body className={inter.className}>
+                <main>{props.children}</main>
+            </body>
         </html>
     )
 }
