@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 import '@/style/globals.css'
 import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer'
 
 const roboto = Roboto({
     subsets: ['latin'],
@@ -24,6 +25,7 @@ const RootLayout: React.FC<Readonly<RootLayoutProps>> = (
             <body className='mx-auto min-h-screen max-w-2xl bg-purple px-4 py-1 text-primary'>
                 <Header />
                 {props.children}
+                <Footer />
             </body>
         </html>
     )

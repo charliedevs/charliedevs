@@ -7,11 +7,11 @@ import { IconExternalLink } from '@tabler/icons-react'
 
 const Home: NextPage = () => {
     return (
-        <main className='flex w-full flex-col items-center justify-between gap-14'>
+        <main className='flex w-full flex-col items-center justify-between gap-8 transition-all md:gap-14'>
             <div id='blurb' className='flex w-full flex-col gap-4 leading-7'>
                 <h1
                     title='IPA phonemic transcription of charliedevs'
-                    className='-mb-2 text-xs tracking-wide text-secondary'
+                    className='-mb-3 text-xs tracking-wide text-secondary'
                 >
                     {'/ˈtʃɑɹ.li.dɛvz/'}
                 </h1>
@@ -28,10 +28,10 @@ const Home: NextPage = () => {
                 </p>
             </div>
             <div id='projects' className='min-h-44 w-full'>
-                <h2 className='mb-8 text-xl font-semibold'>Projects</h2>
+                <h2 className='mb-6 text-xl font-semibold md:mb-8'>Projects</h2>
                 <div
                     id='project-links'
-                    className='grid h-fit grid-cols-1 justify-between gap-3 text-left transition-all  sm:grid-cols-2 md:mb-0 md:w-full md:max-w-3xl md:grid-cols-3'
+                    className='grid h-fit grid-cols-1 justify-between gap-3 text-left sm:grid-cols-2 md:w-full md:max-w-3xl md:grid-cols-3'
                 >
                     {projects.map((p) => (
                         <Link
@@ -41,7 +41,7 @@ const Home: NextPage = () => {
                             target='_blank'
                             title='Open GitHub Page'
                         >
-                            <div className='group -mt-3  h-fit min-h-24 rounded-lg from-fuchsia-400/20 to-fuchsia-400/15 px-2 py-3 outline-none transition-all ease-in hover:bg-gradient-to-br md:px-4 md:hover:min-h-[7.5rem]'>
+                            <div className='group -mt-3  h-fit min-h-24 rounded-lg from-fuchsia-500/15 to-fuchsia-400/10 px-2 py-3 outline-none transition-all ease-in hover:bg-gradient-to-br md:px-4 md:hover:min-h-[7.5rem]'>
                                 <h3 className='mr-1 flex justify-between align-middle font-medium tracking-wide underline underline-offset-4 transition-all group-hover:text-gray-100 group-hover:underline-offset-2'>
                                     {p.title}
                                     <IconExternalLink
@@ -58,7 +58,7 @@ const Home: NextPage = () => {
                 </div>
             </div>
             <div id='blog-posts' className='min-h-44 w-full'>
-                <h2 className='mb-8 text-xl font-semibold'>Blog</h2>
+                <h2 className='mb-6 text-xl font-semibold md:mb-8'>Blog</h2>
                 <div id='blog-links' className='grid flex-col gap-6'>
                     {[
                         { title: 'This is a Blog Post', date: '2024-03-10' },
@@ -73,7 +73,7 @@ const Home: NextPage = () => {
                     ].map((b) => (
                         <div key={b.title} className='flex justify-between'>
                             <Link href='/'>
-                                <p className='underline hover:text-slate-300'>
+                                <p className='underline hover:decoration-slate-400'>
                                     {b.title}
                                 </p>
                             </Link>
@@ -84,7 +84,7 @@ const Home: NextPage = () => {
                     ))}
                     <div>
                         <Link href='/blog'>
-                            <p className='underline hover:text-slate-300'>
+                            <p className='underline hover:decoration-slate-400'>
                                 More...
                             </p>
                         </Link>

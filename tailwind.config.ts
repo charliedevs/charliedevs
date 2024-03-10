@@ -12,6 +12,12 @@ const config: Config = {
                 purple: {
                     DEFAULT: '#20172C',
                 },
+                primary: {
+                    DEFAULT: '#DEDAE3',
+                },
+                secondary: {
+                    DEFAULT: '#756B83',
+                },
             },
         },
     },
