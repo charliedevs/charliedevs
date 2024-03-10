@@ -5,7 +5,7 @@ import Header from '@/components/layout/Header'
 
 const roboto = Roboto({
     subsets: ['latin'],
-    weight: ['300', '400', '500', '700', '900'],
+    weight: ['100', '300', '400', '500', '700', '900'],
 })
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ const RootLayout: React.FC<Readonly<RootLayoutProps>> = (
 ) => {
     return (
         <html lang='en' className={roboto.className}>
-            <body className='bg-purple text-primary mx-auto min-h-screen max-w-2xl px-4 py-1'>
+            <body className='mx-auto min-h-screen max-w-2xl bg-purple px-4 py-1 text-primary'>
                 <Header />
                 {props.children}
             </body>
