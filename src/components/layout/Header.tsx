@@ -1,6 +1,6 @@
 export const Header = () => {
     return (
-        <header className='mt-4 flex w-full items-center justify-between md:mt-8'>
+        <header className='mt-4 flex h-10 w-full items-start justify-between md:mt-8 md:h-20'>
             <p className='text-secondary'>charliedevs</p>
             <div className='flex gap-4'>
                 <div id='blogLink' className='text-secondary'>
