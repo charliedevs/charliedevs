@@ -1,36 +1,37 @@
 'use client'
 import type { NextPage } from 'next'
 import Link from 'next/link'
+import moment from 'moment'
 import { projects } from './_projects'
 import { IconExternalLink } from '@tabler/icons-react'
 
 const Home: NextPage = () => {
     return (
         <main className='flex w-full flex-col items-center justify-between gap-14'>
-            <div
-                id='blurb'
-                className='flex w-full flex-col gap-6 text-sm leading-7 md:text-base'
-            >
-                <h1 className='-mb-4 text-xs tracking-wide text-secondary'>
+            <div id='blurb' className='flex w-full flex-col gap-4 leading-7'>
+                <h1
+                    title='IPA phonemic transcription of charliedevs'
+                    className='-mb-2 text-xs tracking-wide text-secondary'
+                >
                     {'/ˈtʃɑɹ.li.dɛvz/'}
                 </h1>
                 <p>
-                    Hi! I&apos;m <strong>Charlie</strong>, a developer/web
-                    designer. I build cool software incorporating some of my
-                    passions: <strong>music</strong>, <strong>language</strong>,{' '}
-                    <strong>technology</strong>, and <strong>art</strong>.
+                    Hey there! I&apos;m <b>Charlie</b>—a developer/web designer
+                    creating apps that combine my love for <b>music</b>,{' '}
+                    <b>language</b>, and <b>technology</b> with a focus on
+                    responsive, user-centered design.
                 </p>
                 <p>
-                    Right now, I&apos;m working on a tool to{' '}
-                    <strong>visualize sentence structure</strong> to help people
-                    understand some of the complexities of English grammar.
+                    At the moment, I&apos;m working on a tool that lets you{' '}
+                    <b>visualize sentence structure</b> to unpack some of the
+                    complexities of English grammar.
                 </p>
             </div>
-            <div id='projects' className='flex w-full flex-col gap-5'>
-                <h2 className='text-xl font-semibold'>Projects</h2>
+            <div id='projects' className='min-h-44 w-full'>
+                <h2 className='mb-4 text-xl font-semibold'>Projects</h2>
                 <div
                     id='project-links'
-                    className='mb-32 grid h-fit gap-4 text-left transition-all sm:grid-cols-2  md:-ml-2 md:mb-0 md:w-full md:max-w-3xl md:grid-cols-3'
+                    className='-ml-2 grid h-fit gap-3 text-left transition-all sm:grid-cols-2 md:-ml-4 md:mb-0 md:w-full md:max-w-3xl md:grid-cols-3'
                 >
                     {projects.map((p) => (
                         <Link
@@ -40,20 +41,54 @@ const Home: NextPage = () => {
                             target='_blank'
                             title='Open GitHub Page'
                         >
-                            <div className='from-violet-700/20 to-fuchsia-600/10 group h-fit min-h-24 rounded-lg px-2 py-3 outline-none transition-all ease-in hover:bg-gradient-to-tr md:min-h-28 md:hover:bg-gradient-to-br md:hover:outline-1'>
-                                <h3 className='group-hover:text-gray-100 mr-1 flex justify-between align-middle text-sm font-medium tracking-wide underline underline-offset-4 transition-all group-hover:underline-offset-2'>
+                            <div className='group h-fit min-h-24 rounded-lg from-violet-400/15 to-fuchsia-300/10 px-2 py-3 outline-none transition-all ease-in hover:bg-gradient-to-br md:px-4 md:hover:min-h-[7.5rem]'>
+                                <h3 className='mr-1 flex justify-between align-middle font-medium tracking-wide underline underline-offset-4 transition-all group-hover:text-gray-100 group-hover:underline-offset-2'>
                                     {p.title}
                                     <IconExternalLink
                                         size={16}
                                         className='mr-4 mt-0.5 opacity-0 transition-all ease-in group-hover:mr-0 group-hover:opacity-70'
                                     />
                                 </h3>
-                                <p className='text-gray-100 mt-2 max-w-[40ch] text-sm opacity-80 transition-all group-hover:opacity-90 md:group-hover:mt-3'>
+                                <p className='mt-2 max-w-[40ch] text-sm text-gray-100 opacity-80 transition-all group-hover:opacity-90 md:group-hover:mt-3'>
                                     {p.description}
                                 </p>
                             </div>
                         </Link>
                     ))}
+                </div>
+            </div>
+            <div id='blog-posts' className='min-h-44 w-full'>
+                <h2 className='mb-10 text-xl font-semibold'>Blog</h2>
+                <div id='blog-links' className='grid flex-col gap-6'>
+                    {[
+                        { title: 'This is a Blog Post', date: '2024-03-10' },
+                        {
+                            title: 'This is Another Blog Post',
+                            date: '2024-03-08',
+                        },
+                        {
+                            title: 'Yet Another Blog Post',
+                            date: '2024-02-27',
+                        },
+                    ].map((b) => (
+                        <div key={b.title} className='flex justify-between'>
+                            <Link href='/'>
+                                <p className='underline hover:text-slate-300'>
+                                    {b.title}
+                                </p>
+                            </Link>
+                            <p className='ml-4'>
+                                {moment(b.date).format('MMM D, YYYY')}
+                            </p>
+                        </div>
+                    ))}
+                    <div>
+                        <Link href='/blog'>
+                            <p className='underline hover:text-slate-300'>
+                                More...
+                            </p>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </main>
