@@ -12,8 +12,8 @@
     "css.lint.unknownAtRules": "ignore",
     "tailwindCSS.includeLanguages": {
         "html": "html",
-        "tsx": "tsx",
         "typescript": "typescript",
+        "typescriptreact": "typescriptreact",
         "css": "css"
     },
     "editor.quickSuggestions": {
