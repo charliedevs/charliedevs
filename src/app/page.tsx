@@ -28,10 +28,10 @@ const Home: NextPage = () => {
                 </p>
             </div>
             <div id='projects' className='min-h-44 w-full'>
-                <h2 className='mb-4 text-xl font-semibold'>Projects</h2>
+                <h2 className='mb-8 text-xl font-semibold'>Projects</h2>
                 <div
                     id='project-links'
-                    className='-ml-2 grid h-fit gap-3 text-left transition-all sm:grid-cols-2 md:-ml-4 md:mb-0 md:w-full md:max-w-3xl md:grid-cols-3'
+                    className='grid h-fit grid-cols-1 justify-between gap-3 text-left transition-all  sm:grid-cols-2 md:mb-0 md:w-full md:max-w-3xl md:grid-cols-3'
                 >
                     {projects.map((p) => (
                         <Link
@@ -41,7 +41,7 @@ const Home: NextPage = () => {
                             target='_blank'
                             title='Open GitHub Page'
                         >
-                            <div className='group h-fit min-h-24 rounded-lg from-violet-400/15 to-fuchsia-300/10 px-2 py-3 outline-none transition-all ease-in hover:bg-gradient-to-br md:px-4 md:hover:min-h-[7.5rem]'>
+                            <div className='group -mt-3  h-fit min-h-24 rounded-lg from-fuchsia-400/20 to-fuchsia-400/15 px-2 py-3 outline-none transition-all ease-in hover:bg-gradient-to-br md:px-4 md:hover:min-h-[7.5rem]'>
                                 <h3 className='mr-1 flex justify-between align-middle font-medium tracking-wide underline underline-offset-4 transition-all group-hover:text-gray-100 group-hover:underline-offset-2'>
                                     {p.title}
                                     <IconExternalLink
@@ -58,7 +58,7 @@ const Home: NextPage = () => {
                 </div>
             </div>
             <div id='blog-posts' className='min-h-44 w-full'>
-                <h2 className='mb-10 text-xl font-semibold'>Blog</h2>
+                <h2 className='mb-8 text-xl font-semibold'>Blog</h2>
                 <div id='blog-links' className='grid flex-col gap-6'>
                     {[
                         { title: 'This is a Blog Post', date: '2024-03-10' },
