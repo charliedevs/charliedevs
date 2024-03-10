@@ -1,8 +1,12 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import '@/style/globals.css'
+import Header from '@/components/layout/Header'
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({
+    subsets: ['latin'],
+    weight: ['300', '400', '500', '700', '900'],
+})
 
 export const metadata: Metadata = {
     title: 'charliedevs',
@@ -16,9 +20,10 @@ const RootLayout: React.FC<Readonly<RootLayoutProps>> = (
     props: Readonly<RootLayoutProps>
 ) => {
     return (
-        <html lang='en'>
-            <body className={inter.className}>
-                <main>{props.children}</main>
+        <html lang='en' className={roboto.className}>
+            <body className='bg-purple text-primary mx-auto min-h-screen max-w-2xl px-4 py-1'>
+                <Header />
+                {props.children}
             </body>
         </html>
     )

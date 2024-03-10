@@ -9,5 +9,14 @@
     "prettier.useEditorConfig": false,
     "prettier.useTabs": false,
     "prettier.configPath": ".prettierrc",
-    "css.lint.unknownAtRules": "ignore"
+    "css.lint.unknownAtRules": "ignore",
+    "tailwindCSS.includeLanguages": {
+        "html": "html",
+        "tsx": "tsx",
+        "typescript": "typescript",
+        "css": "css"
+    },
+    "editor.quickSuggestions": {
+        "strings": true
+    }
 }

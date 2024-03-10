@@ -2,9 +2,9 @@ import type { NextPage } from 'next'
 
 const Home: NextPage = () => {
     return (
-        <>
-        Test
-        </>
+        <main className='flex w-full flex-col items-center justify-between'>
+            test
+        </main>
     )
 }
 
