@@ -6,7 +6,7 @@ const config: Config = {
         extend: {
             textColor: {
                 primary: '#DEDAE3',
-                secondary: '#756B83',
+                secondary: '#A098AA',
             },
             colors: {
                 purple: {
@@ -16,7 +16,7 @@ const config: Config = {
                     DEFAULT: '#DEDAE3',
                 },
                 secondary: {
-                    DEFAULT: '#756B83',
+                    DEFAULT: '#A098AA',
                 },
             },
         },
