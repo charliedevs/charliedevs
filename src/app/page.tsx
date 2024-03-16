@@ -1,7 +1,7 @@
 'use client'
 import type { NextPage } from 'next'
 import Link from 'next/link'
-import moment from 'moment'
+import dayjs from 'dayjs'
 import { projects } from './_projects'
 import { IconExternalLink } from '@tabler/icons-react'
 
@@ -11,7 +11,7 @@ const Home: NextPage = () => {
             <div id='blurb' className='flex w-full flex-col gap-4 leading-7'>
                 <h1
                     title='IPA phonemic transcription of charliedevs'
-                    className='-mb-3 text-xs tracking-wide text-secondary'
+                    className='text-secondary -mb-3 text-xs tracking-wide'
                 >
                     {'/ˈtʃɑɹ.li.dɛvz/'}
                 </h1>
@@ -78,7 +78,7 @@ const Home: NextPage = () => {
                                 </p>
                             </Link>
                             <p className='ml-4'>
-                                {moment(b.date).format('MMM D, YYYY')}
+                                {dayjs(b.date).format('MMM D, YYYY')}
                             </p>
                         </div>
                     ))}
