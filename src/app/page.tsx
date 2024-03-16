@@ -16,10 +16,11 @@ const Home: NextPage = () => {
                     {'/ˈtʃɑɹ.li.dɛvz/'}
                 </h1>
                 <p>
-                    Hey there! I&apos;m <b>Charlie</b>—a developer/web designer
-                    creating apps that combine my love for <b>music</b>,{' '}
-                    <b>language</b>, and <b>technology</b> with a focus on
-                    responsive, user-centered design.
+                    Hey there—I&apos;m <b>Charlie</b>! I&apos;m a software
+                    developer and web designer. I build apps that combine my
+                    love for <b>music</b>, <b>language</b>, and{' '}
+                    <b>technology</b> with a focus on responsive, user-centered
+                    design.
                 </p>
                 <p>
                     At the moment, I&apos;m working on a tool that lets you{' '}

@@ -11,7 +11,7 @@ export const projects: Project[] = [
         title: 'grammar-analyzer',
         href: 'https://github.com/charliedevs/grammar-analyzer',
         description:
-            'Node.js server that takes an English sentence and uses AI to parse the grammar.',
+            'API that takes an English sentence and uses AI to parse the grammar.',
     },
     {
         title: 'charliedevs',
