@@ -1,4 +1,3 @@
-'use client'
 import type { NextPage } from 'next'
 import Link from 'next/link'
 import dayjs from 'dayjs'
@@ -11,7 +10,7 @@ const Home: NextPage = () => {
             <div id='blurb' className='flex w-full flex-col gap-4 leading-7'>
                 <h1
                     title='IPA phonemic transcription of charliedevs'
-                    className='text-secondary -mb-3 text-xs tracking-wide'
+                    className='-mb-3 text-xs tracking-wide text-secondary'
                 >
                     {'/ˈtʃɑɹ.li.dɛvz/'}
                 </h1>
