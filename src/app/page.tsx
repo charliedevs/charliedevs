@@ -34,7 +34,7 @@ const Home: NextPage = () => {
                     className='grid h-fit grid-cols-1 justify-between gap-3 text-left sm:grid-cols-2 md:w-full md:max-w-3xl md:grid-cols-3'
                 >
                     {projects.map((p) => (
-                        <Link
+                        <a
                             key={p.title}
                             id={p.title.replace(' ', '-') + '-link'}
                             href={p.href}
@@ -53,7 +53,7 @@ const Home: NextPage = () => {
                                     {p.description}
                                 </p>
                             </div>
-                        </Link>
+                        </a>
                     ))}
                 </div>
             </div>
