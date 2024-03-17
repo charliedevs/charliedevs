@@ -8,12 +8,12 @@ const Home: NextPage = () => {
     return (
         <main className='flex w-full flex-col items-center justify-between gap-8 transition-all md:gap-14'>
             <div id='blurb' className='flex w-full flex-col gap-4 leading-7'>
-                <h1
+                <p
                     title='IPA phonemic transcription of charliedevs'
                     className='-mb-3 text-xs tracking-wide text-secondary'
                 >
                     {'/ˈtʃɑɹ.li.dɛvz/'}
-                </h1>
+                </p>
                 <p>
                     Hey there—I&apos;m <b>Charlie</b>! I&apos;m a software
                     developer and web designer. I build apps that combine my
