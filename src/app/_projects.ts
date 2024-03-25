@@ -8,10 +8,10 @@ interface Project {
 
 export const projects: Project[] = [
     {
-        title: 'grammar-analyzer',
-        href: 'https://github.com/charliedevs/grammar-analyzer',
+        title: 'musicalranges',
+        href: 'https://github.com/charliedevs/musicalranges',
         description:
-            'API that takes an English sentence and uses AI to parse the grammar.',
+            'Webapp to visualize the playable ranges of different musical instruments.',
     },
     {
         title: 'charliedevs',
@@ -20,8 +20,9 @@ export const projects: Project[] = [
             'Personal website made with react, next.js, and tailwindcss.',
     },
     {
-        title: 'my dotfiles',
-        href: 'https://github.com/charliedevs/dotfiles',
-        description: 'Configuration files for zsh, vim, tmux, and others.',
+        title: 'grammar-analyzer',
+        href: 'https://github.com/charliedevs/grammar-analyzer',
+        description:
+            'API that takes an English sentence and uses AI to parse the grammar.',
     },
 ]
