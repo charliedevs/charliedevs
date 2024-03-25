@@ -1,4 +1,3 @@
-'use client'
 import type { NextPage } from 'next'
 import Link from 'next/link'
 import dayjs from 'dayjs'
@@ -9,12 +8,12 @@ const Home: NextPage = () => {
     return (
         <main className='flex w-full flex-col items-center justify-between gap-8 transition-all md:gap-14'>
             <div id='blurb' className='flex w-full flex-col gap-4 leading-7'>
-                <h1
+                <p
                     title='IPA phonemic transcription of charliedevs'
-                    className='text-secondary -mb-3 text-xs tracking-wide'
+                    className='-mb-3 text-xs tracking-wide text-secondary'
                 >
                     {'/ˈtʃɑɹ.li.dɛvz/'}
-                </h1>
+                </p>
                 <p>
                     Hey there—I&apos;m <b>Charlie</b>! I&apos;m a software
                     developer and web designer. I build apps that combine my
@@ -35,7 +34,7 @@ const Home: NextPage = () => {
                     className='grid h-fit grid-cols-1 justify-between gap-3 text-left sm:grid-cols-2 md:w-full md:max-w-3xl md:grid-cols-3'
                 >
                     {projects.map((p) => (
-                        <Link
+                        <a
                             key={p.title}
                             id={p.title.replace(' ', '-') + '-link'}
                             href={p.href}
@@ -54,7 +53,7 @@ const Home: NextPage = () => {
                                     {p.description}
                                 </p>
                             </div>
-                        </Link>
+                        </a>
                     ))}
                 </div>
             </div>
