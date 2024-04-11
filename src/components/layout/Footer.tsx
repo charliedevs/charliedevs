@@ -17,25 +17,25 @@ const footerLinks: FooterLink[] = [
         id: 0,
         title: "Charlie's GitHub",
         href: 'https://github.com/charliedevs',
-        icon: <IconBrandGithub size='1.1rem' />,
+        icon: <IconBrandGithub size='20' />,
     },
     {
         id: 1,
         title: "Charlie's MuseScore Profile",
         href: 'https://musescore.com/user/33694405',
-        icon: <IconFileMusic size='1.1rem' />,
+        icon: <IconFileMusic size='20' />,
     },
     {
         id: 2,
         title: "Charlie's LinkedIn",
         href: 'https://www.linkedin.com/in/charlie-davis-54762a18b/',
-        icon: <IconBrandLinkedin size='1.1rem' />,
+        icon: <IconBrandLinkedin size='20' />,
     },
     {
         id: 3,
         title: "Charlie's YouTube",
         href: 'https://www.youtube.com/@charliecarrot',
-        icon: <IconBrandYoutubeFilled size='1.1rem' />,
+        icon: <IconBrandYoutubeFilled size='20' />,
     },
 ]
 
@@ -48,7 +48,7 @@ export const Footer = () => {
                     <p className='tracking-wide'>Charlie Davis</p>
                     <div
                         id='iconLinks'
-                        className='ml-10 mr-4 mt-[0.15em] flex gap-10 transition-all ease-in md:mr-0 md:gap-4'
+                        className='ml-10 mr-4 mt-[0.15em] flex gap-10 transition-all ease-in md:mr-1 md:gap-6'
                     >
                         {footerLinks.map((link) => (
                             <a
