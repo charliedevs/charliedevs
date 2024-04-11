@@ -23,8 +23,9 @@ const Home: NextPage = () => {
                 </p>
                 <p>
                     At the moment, I&apos;m working on a tool that lets you{' '}
-                    <b>visualize sentence structure</b> to unpack some of the
-                    complexities of English grammar.
+                    <b>visualize musical instrument ranges</b> to use as a quick
+                    reference when composing or arranging for orchestra or
+                    concert band.
                 </p>
             </div>
             <div id='projects' className='min-h-44 w-full'>
