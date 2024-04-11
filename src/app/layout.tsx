@@ -22,7 +22,7 @@ const RootLayout: React.FC<Readonly<RootLayoutProps>> = (
 ) => {
     return (
         <html lang='en' className={roboto.className}>
-            <body className='mx-auto min-h-screen max-w-2xl bg-purple px-4 py-1 text-primary'>
+            <body className='mx-auto min-h-screen max-w-2xl bg-purple px-4 py-1 text-primary 2xl:max-w-3xl'>
                 <Header />
                 {props.children}
                 <Footer />
