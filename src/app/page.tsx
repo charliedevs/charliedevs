@@ -12,18 +12,18 @@ const Home: NextPage = () => {
                 >
                     {'/ˈtʃɑɹ.li.dɛvz/'}
                 </p>
-                <p>
+                <p className='text-pretty'>
                     Hey there—I&apos;m <b>Charlie</b>! I&apos;m a software
                     developer and web designer. I build apps that combine my
                     love for <b>music</b>, <b>language</b>, and{' '}
                     <b>technology</b> with a focus on responsive, user-centered
                     design.
                 </p>
-                <p>
+                <p className='text-pretty'>
                     At the moment, I&apos;m working on a{' '}
                     <b>conlang dictionary</b> web app where you can construct
-                    manage your own language and easily share it with others on
-                    any device.
+                    and manage your own language and easily share it with others
+                    on any device.
                 </p>
             </div>
             <div id='projects' className='min-h-44 w-full py-14'>

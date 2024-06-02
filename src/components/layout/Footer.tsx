@@ -45,7 +45,7 @@ export const Footer = () => {
             <div className='mx-auto w-full max-w-3xl 2xl:max-w-4xl'>
                 <hr className='my-4 h-1 border-secondary' />
                 <div className='flex justify-between align-middle text-sm text-secondary'>
-                    <p className='tracking-wide'>Charlie Davis</p>
+                    <p className='tracking-wide'>© 2024 Charlie Davis</p>
                     <div
                         id='iconLinks'
                         className='ml-10 mr-4 mt-[0.15em] flex gap-10 transition-all ease-in md:mr-1 md:gap-6'
