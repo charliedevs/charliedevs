@@ -41,7 +41,7 @@ const footerLinks: FooterLink[] = [
 
 export const Footer = () => {
     return (
-        <footer className='mb-10 mt-12 h-fit w-full bg-purple transition-all md:mt-20 md:bg-none 2xl:mt-40'>
+        <footer className='mb-10 mt-auto h-fit w-full bg-purple transition-all md:bg-none'>
             <div className='mx-auto w-full max-w-3xl 2xl:max-w-4xl'>
                 <hr className='my-4 h-1 border-secondary' />
                 <div className='flex justify-between align-middle text-sm text-secondary'>

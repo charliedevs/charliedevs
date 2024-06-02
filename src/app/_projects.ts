@@ -8,16 +8,15 @@ interface Project {
 
 export const projects: Project[] = [
     {
+        title: 'conlang-dictionary',
+        href: 'https://github.com/charliedevs/conlang-dictionary',
+        description: 'An online dictionary for your constructed languages.',
+    },
+    {
         title: 'musicalranges',
         href: 'https://github.com/charliedevs/musicalranges',
         description:
             'Webapp to visualize the playable ranges of different musical instruments.',
-    },
-    {
-        title: 'charliedevs',
-        href: 'https://github.com/charliedevs/charliedevs',
-        description:
-            'Personal website made with react, next.js, and tailwindcss.',
     },
     {
         title: 'grammar-analyzer',

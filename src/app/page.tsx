@@ -1,12 +1,10 @@
-import type { NextPage } from 'next'
-import Link from 'next/link'
-import dayjs from 'dayjs'
-import { projects } from './_projects'
 import { IconExternalLink } from '@tabler/icons-react'
+import type { NextPage } from 'next'
+import { projects } from './_projects'
 
 const Home: NextPage = () => {
     return (
-        <main className='flex w-full flex-col items-center justify-between gap-8 transition-all md:gap-14'>
+        <main className='flex w-full flex-col items-center justify-between gap-24 transition-all md:gap-14'>
             <div id='blurb' className='flex w-full flex-col gap-4 leading-7'>
                 <p
                     title='IPA phonemic transcription of charliedevs'
@@ -22,13 +20,13 @@ const Home: NextPage = () => {
                     design.
                 </p>
                 <p>
-                    At the moment, I&apos;m working on a tool that lets you{' '}
-                    <b>visualize musical instrument ranges</b> to use as a quick
-                    reference when composing or arranging for orchestra or
-                    concert band.
+                    At the moment, I&apos;m working on a{' '}
+                    <b>conlang dictionary</b> web app where you can construct
+                    manage your own language and easily share it with others on
+                    any device.
                 </p>
             </div>
-            <div id='projects' className='min-h-44 w-full'>
+            <div id='projects' className='min-h-44 w-full py-14'>
                 <h2 className='mb-6 text-xl font-semibold md:mb-8'>Projects</h2>
                 <div
                     id='project-links'
@@ -43,7 +41,7 @@ const Home: NextPage = () => {
                             title='Open GitHub Page'
                         >
                             <div className='group -mt-3  h-fit min-h-24 rounded-lg from-fuchsia-500/15 to-fuchsia-400/10 px-2 py-3 outline-none transition-all ease-in hover:bg-gradient-to-br md:px-4 md:hover:min-h-[7.5rem]'>
-                                <h3 className='mr-1 flex justify-between align-middle font-medium tracking-wide underline underline-offset-4 transition-all group-hover:text-gray-100 group-hover:underline-offset-2'>
+                                <h3 className='mr-1 flex justify-between text-nowrap align-middle font-medium tracking-wide underline underline-offset-4 transition-all group-hover:text-gray-100 group-hover:underline-offset-2'>
                                     {p.title}
                                     <IconExternalLink
                                         size={16}
@@ -58,7 +56,7 @@ const Home: NextPage = () => {
                     ))}
                 </div>
             </div>
-            <div id='blog-posts' className='min-h-44 w-full'>
+            {/* <div id='blog-posts' className='min-h-44 w-full'>
                 <h2 className='mb-6 text-xl font-semibold md:mb-8'>Blog</h2>
                 <div id='blog-links' className='grid flex-col gap-6'>
                     {[
@@ -91,7 +89,7 @@ const Home: NextPage = () => {
                         </Link>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </main>
     )
 }

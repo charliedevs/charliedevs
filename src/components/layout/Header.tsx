@@ -18,7 +18,7 @@ export const Header = () => {
                 )}
             </Link>
             <div className='ml-4 flex gap-4'>
-                <Link href='/blog'>
+                {/* <Link href='/blog'>
                     <div
                         id='blogLink'
                         className={
@@ -29,7 +29,7 @@ export const Header = () => {
                     >
                         blog
                     </div>
-                </Link>
+                </Link> */}
                 <Link href='/about'>
                     <div
                         id='aboutLink'
